@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+
+  html,
+  body,
+  #app,
+  #app * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+
+  body {
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    background-color: #f4f6fb;
+    color: #1a2231;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}

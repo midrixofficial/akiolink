@@ -1,0 +1,28 @@
+# AI Agent Rules & System Instructions
+
+Whenever you are asked to edit, refactor, or build features in this repository, you **MUST** read and respect the guidelines in the `.agents/` folder first.
+
+## Required Agent Context Files
+Always read these files before proposing or writing code:
+1. **`.agents/PROJECT_OVERVIEW.md`** — Project goals, directory structure, tech stack, and exact database schemas.
+2. **`.agents/FLOW_AND_CONVENTIONS.md`** — Active API endpoints, frontend state-routing flow, Svelte store mechanics, and styling conventions.
+3. **`.agents/TASK_CHECKLIST.md`** — Quality checks, responsive testing, and safety checklist.
+
+---
+
+## Core Technical Conventions Summary
+
+### 1. Technology Stack & Directory Structure
+- **Backend**: Laravel 13 (endpoints mapped in `routes/api.php` and handled in `app/Http/Controllers/`).
+- **Merchant Panel (React)**: Located in `resources/js/`. Custom state-based router driven by `App.jsx` and popstate listeners (not React Router).
+- **Customer Storefront (Svelte)**: Located in `resources/svelte/`. Unified Single-Page application (`App.svelte`) driven by stores (`brand.js`, `cart.js`, `products.js`).
+- **Views**: Blade templates served in `resources/views/`.
+
+### 2. Styling
+- Standard Tailwind CSS is used.
+- **Dual-Theme Rule**: Always support both light and dark modes. Use Tailwind `dark:*` prefixes for dark mode selectors.
+
+### 3. API Conventions
+- Response success: `{ "success": true, "data": {...}, "message": "" }`
+- Response error: `{ "success": false, "message": "", "errors": {...} }`
+- Public storefront routes are prefixed with `/api/open/`. Authenticated merchant routes require Sanctum auth.
