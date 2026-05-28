@@ -211,11 +211,10 @@ export default function LandingPage({ onNavigate, darkMode, setDarkMode, user })
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
                     
                     {/* Logo */}
-                    <div className="flex items-center gap-2.5 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#1a2231] text-white dark:bg-white dark:text-[#1a2231] font-bold text-lg shadow-md shadow-indigo-500/10">
-                            A
+                    <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                        <div style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: 800, letterSpacing: '-.04em' }} className="text-[#0c0c0c] dark:text-white leading-none select-none">
+                            Akio<span className="text-[#bbbbbb] dark:text-[#4f5a72] font-bold">link</span>
                         </div>
-                        <span className="text-xl font-bold text-[#1a2231] dark:text-white tracking-tight">Akiolink</span>
                     </div>
 
                     {/* Navigation */}
@@ -995,11 +994,10 @@ export default function LandingPage({ onNavigate, darkMode, setDarkMode, user })
                         
                         {/* Column 1: Brand Info */}
                         <div className="space-y-4">
-                            <div className="flex items-center gap-2.5">
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1a2231] text-white dark:bg-white dark:text-[#1a2231] font-bold text-base shadow-sm">
-                                    A
+                            <div className="flex items-center">
+                                <div style={{ fontFamily: "'Syne', sans-serif", fontSize: '20px', fontWeight: 800, letterSpacing: '-.04em' }} className="text-[#0c0c0c] dark:text-white leading-none select-none">
+                                    Akio<span className="text-[#bbbbbb] dark:text-[#4f5a72] font-bold">link</span>
                                 </div>
-                                <span className="text-lg font-bold text-[#1a2231] dark:text-white tracking-tight">Akiolink</span>
                             </div>
                             <p className="text-xs text-[#667085] dark:text-slate-500 leading-relaxed max-w-xs">
                                 Turn menus and QR codes into beautiful, glassmorphic checkout experiences in 60 seconds. Sell smarter and accept direct local orders today.

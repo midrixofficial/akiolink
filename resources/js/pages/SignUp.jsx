@@ -70,11 +70,10 @@ export default function SignUp({ onNavigate }) {
                 <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
 
                 {/* Logo */}
-                <div className="relative flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white font-bold text-lg">
-                        A
+                <div className="relative flex items-center">
+                    <div style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: 800, letterSpacing: '-.04em' }} className="text-white leading-none select-none">
+                        Akio<span style={{ color: '#4f5a72', fontWeight: 700 }}>link</span>
                     </div>
-                    <span className="text-xl font-bold text-white tracking-tight">Akiolink</span>
                 </div>
 
                 {/* Center content */}
@@ -116,11 +115,10 @@ export default function SignUp({ onNavigate }) {
             <div className="flex flex-1 flex-col items-center justify-center px-6 py-12 sm:px-10">
 
                 {/* Mobile logo */}
-                <div className="mb-8 flex items-center gap-2.5 lg:hidden">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#1a2231] text-white font-bold text-base">
-                        A
+                <div className="mb-8 flex items-center lg:hidden">
+                    <div style={{ fontFamily: "'Syne', sans-serif", fontSize: '24px', fontWeight: 800, letterSpacing: '-.04em' }} className="text-[#0c0c0c] dark:text-white leading-none select-none">
+                        Akio<span className="text-[#bbbbbb] dark:text-[#4f5a72] font-bold">link</span>
                     </div>
-                    <span className="text-lg font-bold text-[#1a2231]">Akiolink</span>
                 </div>
 
                 <div className="w-full max-w-md">

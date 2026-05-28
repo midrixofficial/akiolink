@@ -107,13 +107,10 @@ function Sidebar({ sidebarOpen, setSidebarOpen, selectedMenu, onNavigate }) {
             >
                 {/* Logo */}
                 <div className="flex items-center justify-between px-5 py-5 border-b border-[#e4e7ec] dark:border-slate-800">
-                    <div className="flex items-center gap-2.5">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#1a2231] dark:bg-white text-white dark:text-[#1a2231] text-sm font-bold">
-                            A
+                    <div className="flex items-center">
+                        <div style={{ fontFamily: "'Syne', sans-serif", fontSize: '22px', fontWeight: 800, letterSpacing: '-.04em' }} className="text-[#0c0c0c] dark:text-white leading-none select-none">
+                            Akio<span className="text-[#bbbbbb] dark:text-[#4f5a72] font-bold">link</span>
                         </div>
-                        <span className="text-lg font-bold tracking-tight text-[#1a2231] dark:text-white">
-                            Akiolink
-                        </span>
                     </div>
                     <button
                         className="lg:hidden text-slate-500 hover:text-slate-700"
