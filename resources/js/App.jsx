@@ -48,6 +48,12 @@ export default function App() {
         return savedUser ? JSON.parse(savedUser) : null;
     });
 
+    const selectedMenu = currentPath.startsWith("/merchant/product/edit/")
+        ? "Product"
+        : currentPath.startsWith("/merchant/category/edit/")
+            ? "Category"
+            : menuByPath[currentPath] ?? "Dashboard";
+
     const navigate = (path) => {
         if (!path || path === "#" || path === currentPath) return;
         window.history.pushState({}, "", path);
@@ -91,6 +97,23 @@ export default function App() {
         }
     }, [currentPath]);
 
+    // Dynamically update document title based on current path / active menu
+    useEffect(() => {
+        if (currentPath === "/") {
+            document.title = "Akiolink | The Ultimate Merchant Digital Menu Platform";
+        } else if (currentPath === "/merchant/signin") {
+            document.title = "Akiolink | Sign In";
+        } else if (currentPath === "/merchant/signup") {
+            document.title = "Akiolink | Sign Up";
+        } else if (currentPath === "/merchant/onboarding") {
+            document.title = "Akiolink | Onboarding";
+        } else {
+            let pageTitle = selectedMenu;
+            if (pageTitle === "Merchant") pageTitle = "Merchant Details";
+            document.title = `Akiolink | ${pageTitle}`;
+        }
+    }, [currentPath, selectedMenu]);
+
     if (currentPath === "/") {
         return (
             <LandingPage
@@ -108,11 +131,6 @@ export default function App() {
     if (currentPath === "/merchant/onboarding") return <Onboarding onNavigate={navigate} />;
 
     // ── Admin shell ────────────────────────────────────────────────
-    const selectedMenu = currentPath.startsWith("/merchant/product/edit/")
-        ? "Product"
-        : currentPath.startsWith("/merchant/category/edit/")
-            ? "Category"
-            : menuByPath[currentPath] ?? "Dashboard";
 
     const renderPage = () => {
         if (currentPath === "/merchant/profile") return <Profile onNavigate={navigate} setUser={setUser} />;
